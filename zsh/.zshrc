@@ -4,7 +4,8 @@ export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 # export ZSH_CUSTOM="$DOTFILES/zsh"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && alias nvm-load='source "$NVM_DIR/nvm.sh"'
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Load NVM
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Load NVM bash completion
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -24,6 +25,9 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # - plugins
+
+# fzf
+source <(fzf --zsh)
 
 # prompt
 zinit ice depth=1; zinit light romkatv/powerlevel10k
@@ -69,6 +73,3 @@ setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
-
-
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
