@@ -68,5 +68,5 @@ setopt hist_ignore_dups
 # prompt
 fpath+=($HOME/.dotfiles/zsh/pure)
 autoload -U promptinit; promptinit
-prompt pure
 zstyle :prompt:pure:git:dirty color 'yellow'
+prompt pure
