@@ -1,9 +1,9 @@
 # Appearance
-theme = Adventure
+theme = Kanagawa Wave
 window-decoration = none
 cursor-style-blink = true
 shell-integration-features = no-cursor
-
+background = #000000
 # Fonts
 font-family = JetBrains Mono
 font-family-bold = JetBrains Mono Bold

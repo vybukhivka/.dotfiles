@@ -3,16 +3,12 @@ export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 # export XDG_CONFIG_HOME="$DOTFILES/config"
 # export ZSH_CUSTOM="$DOTFILES/zsh"
 
+# Increase the function nesting level to prevent the error
+export FUNCNEST=100
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Load NVM
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Load NVM bash completion
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 # - zinit setup
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -28,11 +24,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # fzf
 source <(fzf --zsh)
-
-# prompt
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # highlighting
 zinit light zsh-users/zsh-syntax-highlighting
@@ -73,3 +64,9 @@ setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
+
+# prompt
+fpath+=($HOME/.dotfiles/zsh/pure)
+autoload -U promptinit; promptinit
+prompt pure
+zstyle :prompt:pure:git:dirty color 'yellow'
