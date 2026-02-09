@@ -1,12 +1,13 @@
 # Appearance
-theme = Kanagawa Wave
+# theme = Kanagawa Wave
 window-decoration = none
 cursor-style-blink = true
+shell-integration = none
 shell-integration-features = no-cursor
 background = #000000
 # Fonts
-font-family = JetBrains Mono
-font-family-bold = JetBrains Mono Bold
+font-family = JetBrains semibold
+font-family-bold = JetBrains bold
 font-size = 13
 adjust-cell-height = 5%
 
