@@ -69,4 +69,10 @@ setopt hist_ignore_dups
 fpath+=($HOME/.dotfiles/zsh/pure)
 autoload -U promptinit; promptinit
 zstyle :prompt:pure:git:dirty color 'yellow'
+export PURE_PROMPT_SYMBOL=">"
+print() {
+    [ 0 -eq $# -a "prompt_pure_precmd" = "${funcstack[-1]}" ] || builtin print "$@";
+}
+prompt_newline='%666v'
 prompt pure
+PROMPT=" $PROMPT"
