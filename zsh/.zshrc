@@ -1,4 +1,7 @@
 export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+export WINEPREFIX="$HOME/.wine"
+export DXVK_CONFIG_FILE="$HOME/dxvk.conf"
+
 # export DOTFILES="$HOME/.dotfiles"
 # export XDG_CONFIG_HOME="$DOTFILES/config"
 # export ZSH_CUSTOM="$DOTFILES/zsh"
