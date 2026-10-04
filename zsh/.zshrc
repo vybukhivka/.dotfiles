@@ -76,3 +76,6 @@ print() {
 prompt_newline='%666v'
 prompt pure
 PROMPT=" $PROMPT"
+
+# opencode
+export PATH=/home/computa/.opencode/bin:$PATH
