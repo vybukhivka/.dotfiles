@@ -1,13 +1,39 @@
 # Appearance
-# theme = Kanagawa Wave
 window-decoration = none
 cursor-style-blink = true
 shell-integration = none
 shell-integration-features = no-cursor
+bell-features = false
 background = #000000
+
 # Fonts
-font-family = JetBrains semibold
-font-family-bold = JetBrains bold
+font-family = JetBrains
+font-style = semibold
+font-style-bold = bold
+font-style-italic = semibold
+font-style-bold-italic = semibold
 font-size = 13
 adjust-cell-height = 5%
+
+# Ashen theme for Ghostty
+background = 121212
+foreground = c5c5c5
+
+palette = 0=1c1c1c
+palette = 1=b85c5c
+palette = 2=82a373
+palette = 3=d4a359
+palette = 4=689d6a
+palette = 5=a883b8
+palette = 6=689d6a
+palette = 7=c5c5c5
+
+palette = 8=383838
+palette = 9=d67474
+palette = 10=9ebd8c
+palette = 11=e8be74
+palette = 12=85b887
+palette = 13=c49fd4
+palette = 14=85b887
+palette = 15=ffffff
 
